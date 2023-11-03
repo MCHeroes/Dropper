@@ -2,6 +2,8 @@ plugins {
     id "java"
     id "idea"
     id("com.github.johnrengelman.shadow") version "7.1.2"
+    id "maven-publish"
+    id "java-library"
 }
 
 group = "mcheroes"
@@ -29,15 +31,23 @@ repositories {
         name = "placeholderapi"
         url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
     }
+    maven {
+        url = uri("http://gro.broskiclan.org:1234/private")
+        allowInsecureProtocol = true
+        credentials {
+            username = "byte"
+            password = "delta"
+        }
+    }
 }
 
 dependencies {
-    compileOnly "io.papermc.paper:paper-api:1.19.4-R0.1-SNAPSHOT"
+    compileOnly "io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT"
 
     compileOnly "com.github.Revxrsal.Lamp:common:3.1.5"
     compileOnly "com.github.Revxrsal.Lamp:bukkit:3.1.5"
 
-    compileOnly files("libs/MCHeroes-Core-1.0.0.jar")
+    compileOnly "mcheroes:core:1.0.0"
 
     compileOnly 'com.github.Redempt:RedLib:6.5.8'
     compileOnly 'me.clip:placeholderapi:2.11.3'
@@ -77,4 +87,39 @@ compileJava { // Preserve parameter names in the bytecode
 shadowJar {
     archiveBaseName.set("MCHeroes-Dropper")
     archiveClassifier.set("")
+}
+
+tasks.register('javadocJar', Jar) {
+    from javadoc
+    archiveClassifier.set('javadoc')
+    archiveBaseName.set("MCHeroes-Dropper")
+}
+
+tasks.register('sourcesJar', Jar) {
+    from sourceSets.main.allJava
+    archiveClassifier.set('sources')
+    archiveBaseName.set("MCHeroes-Dropper")
+}
+
+publishing {
+    repositories {
+        maven {
+            url = uri("http://gro.broskiclan.org:1234/private")
+            allowInsecureProtocol = true
+            credentials {
+                username = "byte"
+                password = "delta"
+            }
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId = 'mcheroes'
+            artifactId = 'dropper'
+            version = '1.0.0'
+            artifact javadocJar
+            artifact sourcesJar
+            artifact shadowJar
+        }
+    }
 }

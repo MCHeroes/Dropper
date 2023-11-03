@@ -1,3 +1,133 @@
 #
 # MCHeroes Dropper v1.0.0
 #
+
+hub:
+  world: "Dropper"
+  x: 0
+  y: 0
+  z: 0
+  yaw: 0
+  pitch: 0
+
+levels:
+  1:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  2:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  3:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  4:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  5:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  6:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  7:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  8:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  9:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  10:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  11:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  12:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  13:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  14:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+  15:
+    spawn:
+      world: "Dropper"
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0

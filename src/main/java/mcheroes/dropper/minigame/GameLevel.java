@@ -1,5 +1,15 @@
 package mcheroes.dropper.minigame;
 
-public class GameLevel {
+import org.bukkit.Location;
 
+public class GameLevel {
+    private final Location spawn;
+
+    public GameLevel(Location spawn) {
+        this.spawn = spawn;
+    }
+
+    public Location getSpawn() {
+        return spawn;
+    }
 }
