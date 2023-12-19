@@ -10,6 +10,7 @@ group = "mcheroes"
 version = "1.0.0"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         name = "papermc-repo"
@@ -32,17 +33,16 @@ repositories {
         url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
     }
     maven {
-        url = uri("http://gro.broskiclan.org:1234/private")
-        allowInsecureProtocol = true
+        url = uri("https://mvn.byteful.me/repository/mcheroes/")
         credentials {
-            username = "byte"
-            password = "delta"
+            username = "mcheroes"
+            password = "MCHeroes!MVN"
         }
     }
 }
 
 dependencies {
-    compileOnly "io.papermc.paper:paper-api:1.20.2-R0.1-SNAPSHOT"
+    compileOnly "io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT"
 
     compileOnly "com.github.Revxrsal.Lamp:common:3.1.5"
     compileOnly "com.github.Revxrsal.Lamp:bukkit:3.1.5"
@@ -104,11 +104,10 @@ tasks.register('sourcesJar', Jar) {
 publishing {
     repositories {
         maven {
-            url = uri("http://gro.broskiclan.org:1234/private")
-            allowInsecureProtocol = true
+            url = uri("https://mvn.byteful.me/repository/mcheroes/")
             credentials {
-                username = "byte"
-                password = "delta"
+                username = "mcheroes"
+                password = "MCHeroes!MVN"
             }
         }
     }
