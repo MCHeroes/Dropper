@@ -18,7 +18,7 @@ public class DropperPlugin extends JavaPlugin {
 
         final List<GameLevel> levels = new ArrayList<>();
         getConfig().getConfigurationSection("levels").getValues(false).forEach((id, data) ->
-                levels.add(new GameLevel(ConfigParser.parsePosition((ConfigurationSection) data).toBukkit())));
+                levels.add(new GameLevel(ConfigParser.parsePosition(((ConfigurationSection) data).getConfigurationSection("spawn")).toBukkit())));
 
         final Location hubSpawn = ConfigParser.parsePosition(getConfig().getConfigurationSection("hub")).toBukkit();
 
