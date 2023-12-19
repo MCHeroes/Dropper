@@ -7,3 +7,6 @@ authors:
 description: The dropper minigame plugin for the Minecraft Heroes event.
 depend:
   - MCHeroes
+softdepend: # World load fixes
+  - SlimeWorldManager
+  - Multiverse-Core
